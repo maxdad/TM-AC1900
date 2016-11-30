@@ -23,4 +23,12 @@ Flash it use CFE webpage is most reliable, you can directly boot into CFE after 
 
 From now on you can flash pretty much anything through the normal firmware update web page.
 
+I am using the Shibby AIO tomato for your reference:
+http://tomato.groov.pl/download/K26ARM/138-MultiWAN/tomato-RT-AC68U-ARM--138-AIO-64K.zip
+
+A lighter version maybe good too if you do not need all the features in AIO and could use some extra JFFS space:
+http://tomato.groov.pl/download/K26ARM/138-MultiWAN/tomato-RT-AC68U-ARM--138-VPN-64K.zip
+
+
+
 
