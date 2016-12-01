@@ -1,7 +1,8 @@
 # TM-AC1900
 Automatic CFE flashing tool for TM-AC1900 -> ASUS AC68U
 
-As always, flash CFE is tricky, the script is free for anyone to use at your own risk, I will not be responsible if anything goes south.
+As always, flash CFE is tricky, the script is free for anyone to use at your own risk, 
+I will not be responsible if anything goes south.
 
 
 Step 1:
