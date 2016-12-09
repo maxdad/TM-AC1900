@@ -9,9 +9,11 @@ Step 1:
 Obtain any ASUS AC68U CFE binary such as 1.0.2.1 tested. You can download it here:
 https://mega.nz/#!V14VXZja!Z_MkN4MjfKmFRh06uuZN9idoqt2yOoWQot_ClCmno_c
 Rename it to new_cfe.bin
+Get this mtd-write v2:
+https://mega.nz/#!R4AWkJSQ!pGw1Vl0j6qS9kYhbOtpvsgbKf-VIRfWRw61HhmIqRDM
 
-Get either telnet or SSH access to the TM-AC1900 router, and make the auto_cfe.sh script + the new_cfe.bin available to the system.
-If you have SSH access, you can use scp to /tmp; otherwise a USB key is always handy.
+Get either telnet or SSH access to the TM-AC1900 router, and scp over (auto_cfe.sh script + the new_cfe.bin + mtd-write) to /tmp/
+if you have SSH access, otherwise a USB key will do the job, you can find out where your USB is mounted using command "df -h".
 
 Step 2:
 cd to the directory where both new_cfe.bin and the auto_cfe.sh script sits in, run it and enjoy watching.
