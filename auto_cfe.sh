@@ -5,7 +5,8 @@ cat /dev/mtd0 > ./old_cfe.bin
 
 echo
 echo Old CFE content:
-strings old_cfe.bin | grep -e mac -e secret | tee /tmp/cfe.old.key
+strings old_cfe.bin | grep -e mac -e secret > /tmp/cfe.old.key
+cat /tmp/cfe.old.key
 echo
 
 replace()
@@ -30,11 +31,16 @@ replace secret_code 8
 
 echo
 echo New CFE content:
-strings new_cfe.bin | grep -e mac -e secret | /tmp/cfe.new.key
+strings new_cfe.bin | grep -e mac -e secret > /tmp/cfe.new.key
+cat /tmp/cfe.new.key
 echo
 
-diff /tmp/cfe.new.key /tmp/cfe.old.key
-if [ $? -gt 0 ];then
+# it is reported that diff is not available on stock rom, so I am changing to a more raw method
+# If someone can test and report back, that'd be great.
+#diff /tmp/cfe.new.key /tmp/cfe.old.key
+STR1="`cat /tmp/cfe.new.key`"
+STR2="`cat /tmp/cfe.old.key`"
+if [ "$STR1" != "$STR2" ];then
    echo "something went wrong in crafting the new CFE image, please go back to the old manual method."
 else
    echo "updating CFE..."
